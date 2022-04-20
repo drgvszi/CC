@@ -6,8 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: rgb(174,176,238);
-  background: radial-gradient(circle, rgba(174,176,238,1) 0%, rgba(164,199,217,1) 58%, rgba(148,233,185,1) 100%);
+  background: rgb(174, 176, 238);
+  background: radial-gradient(circle, rgba(174, 176, 238, 1) 0%, rgba(164, 199, 217, 1) 58%, rgba(148, 233, 185, 1) 100%);
 }
 
 code {
@@ -16,19 +16,20 @@ code {
 }
 
 .App {
-  margin-top:2.5%;
-  margin-left:10%;
-  color:black;
+  margin-top: 2.5%;
+  color: black;
   width: 100%;
   align-items: center;
 }
 
-.row{
+.row {
   display: grid;
-  grid-auto-flow:column;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
 }
-.line{
-  float:left;
-  width: 33%;
-  
+
+.line {
+  float: left;
+  text-align: center;
+  margin:5%;
 }

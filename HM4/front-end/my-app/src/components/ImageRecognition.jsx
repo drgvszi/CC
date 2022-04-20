@@ -25,8 +25,8 @@ const ImageRecognition = () => {
                 {imageData.map((item, index) => {
                     return (
                         <div key={index}>
-                            <p> Name: {item.name} </p>
-                            <p> Confidence: {item.confidence} </p>
+                            <p> <b>Name:</b> {item.name} </p>
+                            <p> <b>Confidence:</b> {item.confidence} </p>
                         </div>
                     )
                 })}

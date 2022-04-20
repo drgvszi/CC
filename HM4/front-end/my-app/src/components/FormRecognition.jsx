@@ -20,15 +20,15 @@ const FormRecognition = () => {
                 <input type="text" name="url" />
                 <button type="submit"> Get form datas </button>
             </form>
-            <h4>Form dats:</h4>
+            <h4>Form datas:</h4>
             <div>
                 {formData.entities?.map((item, index) => {
                     if (index < 10)
                         return (
                             <div key={index}>
-                                <p> Category: {item.category} </p>
-                                <p> Subcategory: {item.subCategory} </p>
-                                <p> Content: {item.content} </p>
+                                <p><b>Category:</b>  {item.category} </p>
+                                <p><b>Subcategory:</b> {item.subCategory} </p>
+                                <p><b>Content:</b>  {item.content} </p>
                                 <br></br>
                             </div>
                         )

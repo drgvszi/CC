@@ -23,7 +23,8 @@ router.get('/', async (req, res) => {
 
 router.post("/", async (req, res) => {
 
-    const translatedDescription = await axios.post("http://localhost:7071/api/form-recognition", {
+    // const translatedDescription = await axios.post("http://localhost:7071/api/form-recognition", {
+    const translatedDescription = await axios.post("https://form-recognition.azurewebsites.net/api/form-recognition?code=RaI50eeDOIrZPNZKBPu7wwdZAHkgcpyZOQ0ZTbU4NGF8uNjmBpxV4w==", {
         text: req.body.description
     })
 
