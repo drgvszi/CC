@@ -1,2 +1,9 @@
-# CC Brasovianu Dragos-Sebastian
+# CC 
+
+
+
+
+
+Brasovianu Dragos-Sebastian
 Croitor Robert-Constantin
+Andrei Tighineanu
