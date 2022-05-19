@@ -1,0 +1,8 @@
+{
+  "short_name": "Todos List",
+  "name": "Todos List",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
