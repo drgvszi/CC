@@ -1,39 +1,41 @@
 import React from "react";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar"
-import home from "./pages/home";
-import horror from "./pages/horror";
-import romance from "./pages/romance";
-import action from "./pages/action";
-import adventure from "./pages/adventure";
-import comic from "./pages/comic";
-import crime from "./pages/crime";
-import fantasy from "./pages/fantasy";
 
 
-const App = () => {
-  return (
-    
-    <Router>
-      <Navbar/>
-      <Routes>
-        
-        <Route path='/horror' component={horror} />
-        <Route path='/romance' component={romance} />
-     
-        <Route path='/action' component={action} />
-        <Route path='/adventure' component={adventure} />
-        <Route path='/comic' component={comic} />
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {Navigation,Footer} from "./components/exporter";
+import{
+  Home,
+  MyBookshelf,
+  Action,
+  Romance,
+  Adventure,
+  Horror,
+  Fiction
+} from "./pages/pageExporter";
 
-        <Route path='/crime' component={crime} />
-        <Route path='/fantasy' component={fantasy} />
-        <Route exact path='/'  component={home} />
-        
-      </Routes>
-    </Router>
-  );
 
-}
+
+const App = () => (
+  <Router>
+    <Navigation />
+    <Routes>
+
+      
+      <Route path="/" element={<Home />} />
+      <Route path="/romance" element={<Action />} />
+      <Route path="/action" element={<Romance />} />
+      <Route path="/adventure" element={<Adventure />} />
+      <Route path="/fiction" element={<Fiction />} />
+      <Route path="/horror" element={<Horror />} />
+      <Route path="/myShelf" element={<MyBookshelf />} />
+       
+      
+    </Routes>
+    <Footer />
+  </Router>
+);
+
+
 
 export default App;
