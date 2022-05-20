@@ -1,28 +1,103 @@
 import React from "react";
+import "./pagesCSS/card.css";
+import placeHolder from "./img/imgPlaceholder.jpg"
 
 function Home() {
   return (
     <div className="home">
-      <div class="container">
-        <div class="row align-items-center my-5">
-          <div class="col-lg-7">
-            <img
-              class="img-fluid rounded mb-4 mb-lg-0"
-              src="http://placehold.it/900x400"
-              alt=""
-            />
+      <div id="gallery"  >
+
+
+
+<div class="card">
+    <div class="card__side card__side--front">
+        <div class="card__details">
+          <div class="card_details_text">
+          Ananas
           </div>
-          <div class="col-lg-5">
-            <h1 class="font-weight-light">Home</h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
+          <div class="card_details_img">
+          <img src={placeHolder} alt="" />
           </div>
+            
         </div>
-      </div>
+    </div>
+    <div class="card__side card__side--back card__side--back">
+        <div class="card__cta">
+            <div class="cardBackText">
+                <p class="cardText">Author : </p>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card__side card__side--front">
+        <div class="card__details">
+          <div class="card_details_text">
+          Ananas
+          </div>
+          <div class="card_details_img">
+          <img src={placeHolder} alt="" />
+          </div>
+            
+        </div>
+    </div>
+    <div class="card__side card__side--back card__side--back">
+        <div class="card__cta">
+            <div class="cardBackText">
+                <p class="cardText">Author : </p>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card__side card__side--front">
+        <div class="card__details">
+          <div class="card_details_text">
+          Ananas
+          </div>
+          <div class="card_details_img">
+          <img src={placeHolder} alt="" />
+          </div>
+            
+        </div>
+    </div>
+    <div class="card__side card__side--back card__side--back">
+        <div class="card__cta">
+            <div class="cardBackText">
+                <p class="cardText">Author : </p>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card__side card__side--front">
+        <div class="card__details">
+          <div class="card_details_text">
+          Ananas
+          </div>
+          <div class="card_details_img">
+          <img src={placeHolder} alt="" />
+          </div>
+            
+        </div>
+    </div>
+    <div class="card__side card__side--back card__side--back">
+        <div class="card__cta">
+            <div class="cardBackText">
+                <p class="cardText">Author : </p>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
     </div>
   );
 }
