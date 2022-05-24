@@ -1,30 +1,280 @@
 import React from "react";
+import "./pagesCSS/card.css";
+import "./pagesCSS/home.css";
+import "./pagesCSS/toggleButton.css";
+import {Book2,Book6,Book8,Book10,Book11,Book13} from "./exporters/imgExporter";
 
 function Fiction() {
   return (
-    <div className="fiction">
-      <div class="container">
-        <div class="row align-items-center my-5">
-          <div class="col-lg-7">
-            <img
-              class="img-fluid rounded mb-4 mb-lg-0"
-              src="http://placehold.it/900x400"
-              alt=""
-            />
+    <div className="Fiction">
+      <div id="gallery"  >
+
+        <div class="row">
+          <div class="col-sm-2">
+          <div class="card">
+                            <div class="card__side card__side--front">
+                            <div class="card__details">
+                                    
+                                    <div class="card_details_img">
+                                        <img src={Book2} alt="" />
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back">
+                                <div class="card__cta">
+                                    <div class="cardBack">
+
+                                    <div class="ro1BackCard">
+                                            <p>Name : Sin Eater</p>
+                                        </div>
+                                        <div class="ro2BackCard">
+                                            <p>Author : Megan Campisi</p>
+                                        </div>
+                                        <div class="ro3BackCard">
+                                            <p>Historical, Fiction</p>
+                                        </div>
+                                        <div class="ro4BackCard">
+
+
+                                            <label class="label">
+                                                <div class="toggle">
+                                                    <input class="toggle-state" type="checkbox" name="check" value="check" />
+                                                    <div class="indicator"></div>
+                                                </div>
+                                                <div class="label-text">Save to myShelf</div>
+                                            </label>
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                            <div class="card__details">
+                                    
+                                    <div class="card_details_img">
+                                        <img src={Book13} alt="" />
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back">
+                                <div class="card__cta">
+                                    <div class="cardBack">
+
+                                    <div class="ro1BackCard">
+                                            <p>Name :Harry Potter and the Deadly Hollows</p>
+                                        </div>
+                                        <div class="ro2BackCard">
+                                            <p>Author : J.K.Rowlings</p>
+                                        </div>
+                                        <div class="ro3BackCard">
+                                            <p>Fictional, Adventure, Action</p>
+                                        </div>
+                                        <div class="ro4BackCard">
+
+
+                                            <label class="label">
+                                                <div class="toggle">
+                                                    <input class="toggle-state" type="checkbox" name="check" value="check" />
+                                                    <div class="indicator"></div>
+                                                </div>
+                                                <div class="label-text">Save to myShelf</div>
+                                            </label>
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
           </div>
-          <div class="col-lg-5">
-            <h1 class="font-weight-light">Fiction</h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
+          <div class="col-sm-2">
+          <div class="card">
+                            <div class="card__side card__side--front">
+                            <div class="card__details">
+                                    
+                                    <div class="card_details_img">
+                                        <img src={Book6} alt="" />
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back">
+                                <div class="card__cta">
+                                    <div class="cardBack">
+
+                                    <div class="ro1BackCard">
+                                            <p>Name : Lunar Storm</p>
+                                        </div>
+                                        <div class="ro2BackCard">
+                                            <p>Author : Terry Crosby</p>
+                                        </div>
+                                        <div class="ro3BackCard">
+                                            <p>Fictional</p>
+                                        </div>
+                                        <div class="ro4BackCard">
+
+
+                                            <label class="label">
+                                                <div class="toggle">
+                                                    <input class="toggle-state" type="checkbox" name="check" value="check" />
+                                                    <div class="indicator"></div>
+                                                </div>
+                                                <div class="label-text">Save to myShelf</div>
+                                            </label>
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                            <div class="card__details">
+                                    
+                                    <div class="card_details_img">
+                                        <img src={Book8} alt="" />
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back">
+                                <div class="card__cta">
+                                    <div class="cardBack">
+
+                                    <div class="ro1BackCard">
+                                            <p>Name : The Girl Who Never</p>
+                                        </div>
+                                        <div class="ro2BackCard">
+                                            <p>Author : HC Michaels</p>
+                                        </div>
+                                        <div class="ro3BackCard">
+                                            <p>Fictional</p>
+                                        </div>
+                                        <div class="ro4BackCard">
+
+
+                                            <label class="label">
+                                                <div class="toggle">
+                                                    <input class="toggle-state" type="checkbox" name="check" value="check" />
+                                                    <div class="indicator"></div>
+                                                </div>
+                                                <div class="label-text">Save to myShelf</div>
+                                            </label>
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
           </div>
-        </div>
+          <div class="col-sm-2">
+          <div class="card">
+                            <div class="card__side card__side--front">
+                            <div class="card__details">
+                                    
+                                    <div class="card_details_img">
+                                        <img src={Book10} alt="" />
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back">
+                                <div class="card__cta">
+                                    <div class="cardBack">
+
+                                    <div class="ro1BackCard">
+                                            <p>Name : The Girl in Red</p>
+                                        </div>
+                                        <div class="ro2BackCard">
+                                            <p>Author : Christina Henry</p>
+                                        </div>
+                                        <div class="ro3BackCard">
+                                            <p>Aventure, Fictional, Horror, Action</p>
+                                        </div>
+                                        <div class="ro4BackCard">
+
+
+                                            <label class="label">
+                                                <div class="toggle">
+                                                    <input class="toggle-state" type="checkbox" name="check" value="check" />
+                                                    <div class="indicator"></div>
+                                                </div>
+                                                <div class="label-text">Save to myShelf</div>
+                                            </label>
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                            <div class="card__details">
+                                    
+                                    <div class="card_details_img">
+                                        <img src={Book11} alt="" />
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back">
+                                <div class="card__cta">
+                                    <div class="cardBack">
+
+                                    <div class="ro1BackCard">
+                                            <p>Name : Son of the Storm</p>
+                                        </div>
+                                        <div class="ro2BackCard">
+                                            <p>Author : Suyi Davies Okungbowa</p>
+                                        </div>
+                                        <div class="ro3BackCard">
+                                            <p>Fiction, Adventure, Action</p>
+                                        </div>
+                                        <div class="ro4BackCard">
+
+
+                                            <label class="label">
+                                                <div class="toggle">
+                                                    <input class="toggle-state" type="checkbox" name="check" value="check" />
+                                                    <div class="indicator"></div>
+                                                </div>
+                                                <div class="label-text">Save to myShelf</div>
+                                            </label>
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        
+          </div>
+          </div>
       </div>
     </div>
   );
 }
+
+
 
 export default Fiction;

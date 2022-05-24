@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import "./componentsCSS/navigation.css";
 function Navigation() {
   return (
     <div className="navigation">
@@ -9,7 +9,7 @@ function Navigation() {
           <NavLink className="navbar-brand" to="/myShelf">
             My Shelf
           </NavLink>
-          <div>
+          <div class="navClass">
             <ul className="navbar-nav ml-auto">
               
               

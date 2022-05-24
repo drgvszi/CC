@@ -12,7 +12,7 @@ import{
   Adventure,
   Horror,
   Fiction
-} from "./pages/pageExporter";
+} from "./pages/exporters/pageExporter";
 
 
 
