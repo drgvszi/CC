@@ -11,7 +11,9 @@ import{
   Romance,
   Adventure,
   Horror,
-  Fiction
+  Fiction,
+  UploadBook,
+  UploadImg
 } from "./pages/exporters/pageExporter";
 
 
@@ -29,7 +31,8 @@ const App = () => (
       <Route path="/fiction" element={<Fiction />} />
       <Route path="/horror" element={<Horror />} />
       <Route path="/myShelf" element={<MyBookshelf />} />
-       
+      <Route path="/uploadBook" element={<UploadBook />} />
+      <Route path="/uploadImg" element={<UploadImg />} />
       
     </Routes>
     <Footer />
