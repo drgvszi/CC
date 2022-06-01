@@ -1,10 +1,12 @@
 import React from "react";
-
-
-
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import {Navigation,Footer} from "./components/exporter";
-import{
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate
+} from "react-router-dom";
+import { Navigation, Footer } from "./components/exporter";
+import {
   Home,
   MyBookshelf,
   Action,
@@ -13,31 +15,43 @@ import{
   Horror,
   Fiction,
   UploadBook,
-  UploadImg
+  UploadImg,
+  Auth
 } from "./pages/exporters/pageExporter";
 
+import { AuthContextProvider, useAuthState } from './firebase'
+const AuthenticatedRoute = ({ children }) => {
+  const { isAuthenticated } = useAuthState()
 
+  if (!isAuthenticated) {
+    return <Navigate to="/auth" />;
+  }
 
-const App = () => (
-  <Router>
-    <Navigation />
-    <Routes>
+  return children;
+}
 
-      
-      <Route path="/" element={<Home />} />
-      <Route path="/romance" element={< Romance/>} />
-      <Route path="/action" element={< Action/>} />
-      <Route path="/adventure" element={<Adventure />} />
-      <Route path="/fiction" element={<Fiction />} />
-      <Route path="/horror" element={<Horror />} />
-      <Route path="/myShelf" element={<MyBookshelf />} />
-      <Route path="/uploadBook" element={<UploadBook />} />
-      <Route path="/uploadImg" element={<UploadImg />} />
-      
-    </Routes>
-    <Footer />
-  </Router>
-);
+function App() {
+  return (
+    <AuthContextProvider>
+      <BrowserRouter>
+        <Navigation />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/romance" element={<AuthenticatedRoute> <Romance /> </AuthenticatedRoute>} />
+          <Route exact path="/action" element={<AuthenticatedRoute><Action /></AuthenticatedRoute>} />
+          <Route exact path="/adventure" element={<AuthenticatedRoute><Adventure /></AuthenticatedRoute>} />
+          <Route exact path="/fiction" element={<AuthenticatedRoute><Fiction /></AuthenticatedRoute>} />
+          <Route exact path="/horror" element={<AuthenticatedRoute><Horror /></AuthenticatedRoute>} />
+          <Route exact path="/myShelf" element={<AuthenticatedRoute><MyBookshelf /></AuthenticatedRoute>} />
+          <Route exact path="/uploadBook" element={<AuthenticatedRoute><UploadBook /></AuthenticatedRoute>} />
+          <Route exact path="/uploadImg" element={<AuthenticatedRoute><UploadImg /></AuthenticatedRoute>} />
+          <Route exact path="/auth" element={<Auth />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </AuthContextProvider>
+  )
+};
 
 
 

@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./componentsCSS/navigation.css";
+
+
 function Navigation() {
   return (
     <div className="navigation">
@@ -11,8 +13,6 @@ function Navigation() {
           </NavLink>
           <div class="navClass">
             <ul className="navbar-nav ml-auto">
-              
-              
               <li className="nav-item">
                 <NavLink className="nav-link" to="/adventure">
                   Adventure
@@ -36,6 +36,11 @@ function Navigation() {
               <li className="nav-item">
                 <NavLink className="nav-link" to="/fiction">
                   Fiction
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/auth">
+                  Auth
                 </NavLink>
               </li>
 
