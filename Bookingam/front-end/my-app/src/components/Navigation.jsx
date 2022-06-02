@@ -11,8 +11,14 @@ function Navigation() {
           <NavLink className="navbar-brand" to="/myShelf">
             My Shelf
           </NavLink>
+          
           <div class="navClass">
             <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+                <NavLink className="nav-link" to="/auth">
+                  Auth
+                </NavLink>
+              </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/adventure">
                   Adventure
@@ -38,11 +44,7 @@ function Navigation() {
                   Fiction
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/auth">
-                  Auth
-                </NavLink>
-              </li>
+              
 
 
 
