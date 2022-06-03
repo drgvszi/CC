@@ -3,25 +3,50 @@ import "./pagesCSS/card.css";
 import "./pagesCSS/home.css";
 import "./pagesCSS/toggleButton.css";
 import {Book1,Book2,Book3,Book4,Book5,Book6,Book7,Book8,Book9,Book10,Book11,Book12,Book13} from "./exporters/imgExporter";
+import { NavLink } from "react-router-dom";
 
 
 function Home() {
 
     return (
-
+        <body>
+        <div>
+            <li >
+            <NavLink to="/adventure">
+                Adventure
+            </NavLink>
+            </li>
+            <li >
+            <NavLink to="/action">
+                Action
+            </NavLink>
+            </li>
+            <li >
+            <NavLink to="/romance">
+                Romance
+            </NavLink>
+            </li>
+            <li >
+            <NavLink to="/horror">
+                Horror
+            </NavLink>
+            </li>
+            <li >
+            <NavLink to="/fiction">
+                Fiction
+            </NavLink>
+            </li>
+        </div>
         <div className="home">
             <div id="gallery"  >
-
                 <div class="row">
                     <div class="col-sm-2">
                         <div class="card">
                             <div class="card__side card__side--front">
                                 <div class="card__details">
-                                    
                                     <div class="card_details_img">
                                         <img src={Book1} alt="" />
                                     </div>
-
                                 </div>
                             </div>
                             <div class="card__side card__side--back card__side--back">
@@ -577,6 +602,7 @@ function Home() {
 
             </div>
         </div>
+        </body>
     );
 }
 
