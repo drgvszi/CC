@@ -1,3 +1,6 @@
+
+
+
 .navbar-dark {
     background: rgb(29, 30, 31);
 
@@ -14,7 +17,8 @@
     border: none;
     color: silver;
     margin-top: 1px;
-
+ 
+    box-shadow:none;
 }
 
 #signout:hover {

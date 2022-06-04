@@ -7,7 +7,7 @@ const signout = async (e) => {
   e.preventDefault();
   const auth = getAuth();
   signOut(auth).then(() => {
-    window.location.replace("/");
+    window.location.replace("/login");
   }).catch((error) => {
     // An error happened.
     alert(error.code)
@@ -19,20 +19,20 @@ function NavigationLogged() {
   return (
 
     <div className="navigation">
-      <nav class="navbar navbar-expand navbar-dark ">
+      <nav className="navbar navbar-expand navbar-dark ">
         <div className="container">
 
           <NavLink className="navbar-brand" to="/">
-            <div class="navtext">
+            <div className="navtext">
               Bookingam
             </div>
             <span className="sr-only">(current)</span>
           </NavLink>
-          <div class="navClass">
+          <div className="navClass">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <NavLink className="nav-link" to="/uploadBook">
-                  <div class="navtext">
+                  <div className="navtext">
                     UploadBook
                   </div>
                 </NavLink>

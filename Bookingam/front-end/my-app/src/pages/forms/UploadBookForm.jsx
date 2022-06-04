@@ -5,7 +5,7 @@ function UploadBooks() {
   return (
 
     <form>
-      <div class="form-group">
+      <div className="form-group">
         <label for="exampleFormControlFile1">Upload Pdf</label>
         <input type="file" class="form-control-file" id="exampleFormControlFile1"></input>
       </div>

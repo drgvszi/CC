@@ -1,0 +1,82 @@
+.form {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: silver;
+}
+
+input[type="text"],
+input[type="password"] {
+  height: 25px;
+  margin-bottom: 10px;
+
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  background-color: white;
+}
+
+h1 {
+  color: silver;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+
+
+
+.button-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.laber {
+  color: silver;
+}
+
+.input-container {
+  color: silver;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px;
+  margin-bottom: 25px;
+
+}
+
+
+
+#registerForm {
+  height: 400px;
+  width: 300px;
+  background-color: black;
+  margin-bottom: 100px;
+}
+
+#register {
+  background-color: silver;
+  color: black;
+}
+
+
+#loginForm {
+  height: 400px;
+  width: 300px;
+  background-color: black;
+  margin-bottom: 100px;
+}
+
+#login {
+  background-color: silver;
+  color: black;
+}

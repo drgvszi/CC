@@ -12,7 +12,7 @@ function Navigation() {
             Bookingam
             <span className="sr-only">(current)</span>
           </NavLink>
-          <div class="navClass">
+          <div className="navClass">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <NavLink className="nav-link" to="/login">

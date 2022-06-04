@@ -1,6 +1,10 @@
 .containerFooter {
     background: rgb(29, 30, 31);
-    margin-right: 0px;
+    
+    box-shadow:none;
+    border: none;
+    outline: none;
+    
 
 }
 

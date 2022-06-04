@@ -1,3 +1,15 @@
+
+html{
+  resize: both;
+  overflow: auto;
+}
+body{
+  resize: both;
+  overflow: auto;
+
+}
+
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -38,6 +50,8 @@ li a:hover {
 }
 
 .right {
+  border-top:3px solid silver;
+  border-left:3px solid silver;
   width: 90%;
 }
 
