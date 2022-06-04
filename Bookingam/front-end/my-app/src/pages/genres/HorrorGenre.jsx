@@ -8,7 +8,7 @@ function Horror() {
     return (
         <div className="Horror">
 
-            <div class="row">
+<div class="row">
                 <div class="column left">
 
                     <ul>
@@ -58,7 +58,7 @@ function Horror() {
                                             <Card.Text>
                                                 Action, RPG ,Romance
                                             </Card.Text>
-                                            <Button >Read</Button>
+                                            <Button style={{background:"black",boxShadow:"none",border:"0"}}>Read</Button>
                                         </Card.Body>
                                     </Card>
                                 </Col>
@@ -76,7 +76,7 @@ function Horror() {
                                             <Card.Text>
                                                 Action, RPG ,Romance
                                             </Card.Text>
-                                            <Button >Read</Button>
+                                            <Button style={{background:"black",boxShadow:"none",border:"0"}}>Read</Button>
                                         </Card.Body>
                                     </Card>
                                 </Col>
@@ -94,7 +94,7 @@ function Horror() {
                                             <Card.Text>
                                                 Action, RPG ,Romance
                                             </Card.Text>
-                                            <Button >Read</Button>
+                                            <Button style={{background:"black",boxShadow:"none",border:"0"}}>Read</Button>
                                         </Card.Body>
                                     </Card>
                                 </Col>
@@ -112,7 +112,7 @@ function Horror() {
                                             <Card.Text>
                                                 Action, RPG ,Romance
                                             </Card.Text>
-                                            <Button >Read</Button>
+                                            <Button style={{background:"black",boxShadow:"none",border:"0"}}>Read</Button>
                                         </Card.Body>
                                     </Card>
                                 </Col>
@@ -130,7 +130,7 @@ function Horror() {
                                             <Card.Text>
                                                 Action, RPG ,Romance
                                             </Card.Text>
-                                            <Button >Read</Button>
+                                            <Button style={{background:"black",boxShadow:"none",border:"0"}}>Read</Button>
                                         </Card.Body>
                                     </Card>
                                 </Col>
@@ -148,7 +148,7 @@ function Horror() {
                                             <Card.Text>
                                                 Action, RPG ,Romance
                                             </Card.Text>
-                                            <Button >Read</Button>
+                                            <Button style={{background:"black",boxShadow:"none",border:"0"}}>Read</Button>
                                         </Card.Body>
                                     </Card>
                                 </Col>
