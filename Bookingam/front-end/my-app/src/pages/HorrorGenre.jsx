@@ -1,108 +1,132 @@
 import React from "react";
-import "./pagesCSS/card.css";
-import "./pagesCSS/home.css";
-import "./pagesCSS/toggleButton.css";
-import {Book5,Book10} from "./exporters/imgExporter";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Book10} from "./exporters/imgExporter";
+import { Container, Row, Col, Card, Button, Image } from 'react-bootstrap'
 function Horror() {
   return (
     <div className="Horror">
-      <div id="gallery"  >
+     
+     <Container className="px-4" style={{ paddingTop: "3%", paddingBottom: "3%" }}>
+                <Row>
 
-        <div class="row">
-          <div class="col-sm-2">
-          <div class="card">
-                            <div class="card__side card__side--front">
-                            <div class="card__details">
-                                    
-                                    <div class="card_details_img">
-                                        <img src={Book5} alt="" />
-                                    </div>
-
-                                </div>
+                    <Col style={{ height: "500px" }} >
+                        <Card className="cards" style={{ width: '20rem' }}>
+                            <div style={{ height: '20rem', textAlign: 'center' }}>
+                                <Image src={Book10} style={{ objectFit: 'fill', border: "1px solid grey", borderBottom: "0px" }} alt="talkie" />
                             </div>
-                            <div class="card__side card__side--back card__side--back">
-                                <div class="card__cta">
-                                    <div class="cardBack">
+                            <Card.Body style={{ border: "1px solid grey" }} >
+                                <Card.Title>
+                                    Game Of Thrones
+                                    <br></br>
+                                    George R.R.Martin</Card.Title>
+                                <Card.Text>
+                                    Action, RPG ,Romance
+                                </Card.Text>
+                                <Button >Read</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
 
-                                    <div class="ro1BackCard">
-                                            <p>Name : The Worst</p>
-                                        </div>
-                                        <div class="ro2BackCard">
-                                            <p>Author : Romian Toma</p>
-                                        </div>
-                                        <div class="ro3BackCard">
-                                            <p>Horror , Action</p>
-                                        </div>
-                                        <div class="ro4BackCard">
-
-
-                                            <label class="label">
-                                                <div class="toggle">
-                                                    <input class="toggle-state" type="checkbox" name="check" value="check" />
-                                                    <div class="indicator"></div>
-                                                </div>
-                                                <div class="label-text">Save to myShelf</div>
-                                            </label>
-
-
-
-
-                                        </div>
-                                    </div>
-                                </div>
+                    <Col style={{ height: "500px" }} >
+                        <Card className="cards" style={{ width: '20rem' }}>
+                            <div style={{ height: '20rem', textAlign: 'center' }}>
+                                <Image src={Book10} style={{ objectFit: 'fill', border: "1px solid grey", borderBottom: "0px" }} alt="talkie" />
                             </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__side card__side--front">
-                            <div class="card__details">
-                                    
-                                    <div class="card_details_img">
-                                        <img src={Book10} alt="" />
-                                    </div>
+                            <Card.Body style={{ border: "1px solid grey" }} >
+                                <Card.Title>
+                                    Game Of Thrones
+                                    <br></br>
+                                    George R.R.Martin</Card.Title>
+                                <Card.Text>
+                                    Action, RPG ,Romance
+                                </Card.Text>
+                                <Button >Read</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
 
-                                </div>
+                    <Col style={{ height: "500px" }} >
+                        <Card className="cards" style={{ width: '20rem' }}>
+                            <div style={{ height: '20rem', textAlign: 'center' }}>
+                                <Image src={Book10} style={{ objectFit: 'fill', border: "1px solid grey", borderBottom: "0px" }} alt="talkie" />
                             </div>
-                            <div class="card__side card__side--back card__side--back">
-                                <div class="card__cta">
-                                    <div class="cardBack">
+                            <Card.Body style={{ border: "1px solid grey" }} >
+                                <Card.Title>
+                                    Game Of Thrones
+                                    <br></br>
+                                    George R.R.Martin</Card.Title>
+                                <Card.Text>
+                                    Action, RPG ,Romance
+                                </Card.Text>
+                                <Button >Read</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
 
-                                    <div class="ro1BackCard">
-                                            <p>Name : The Girl in Red</p>
-                                        </div>
-                                        <div class="ro2BackCard">
-                                            <p>Author : Christina Henry</p>
-                                        </div>
-                                        <div class="ro3BackCard">
-                                            <p>Aventure, Fictional, Horror, Action</p>
-                                        </div>
-                                        <div class="ro4BackCard">
-
-
-                                            <label class="label">
-                                                <div class="toggle">
-                                                    <input class="toggle-state" type="checkbox" name="check" value="check" />
-                                                    <div class="indicator"></div>
-                                                </div>
-                                                <div class="label-text">Save to myShelf</div>
-                                            </label>
-
-
-
-
-                                        </div>
-                                    </div>
-                                </div>
+                    <Col style={{ height: "500px" }} >
+                        <Card className="cards" style={{ width: '20rem' }}>
+                            <div style={{ height: '20rem', textAlign: 'center' }}>
+                                <Image src={Book10} style={{ objectFit: 'fill', border: "1px solid grey", borderBottom: "0px" }} alt="talkie" />
                             </div>
-                        </div>
-          </div>
-          <div class="col-sm-2">
-            
-          </div>
-          <div class="col-sm-2">
-          </div>
-          </div>
-      </div>
+                            <Card.Body style={{ border: "1px solid grey" }} >
+                                <Card.Title>
+                                    Game Of Thrones
+                                    <br></br>
+                                    George R.R.Martin</Card.Title>
+                                <Card.Text>
+                                    Action, RPG ,Romance
+                                </Card.Text>
+                                <Button >Read</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+
+                    <Col style={{ height: "500px" }} >
+                        <Card className="cards" style={{ width: '20rem' }}>
+                            <div style={{ height: '20rem', textAlign: 'center' }}>
+                                <Image src={Book10} style={{ objectFit: 'fill', border: "1px solid grey", borderBottom: "0px" }} alt="talkie" />
+                            </div>
+                            <Card.Body style={{ border: "1px solid grey" }} >
+                                <Card.Title>
+                                    Game Of Thrones
+                                    <br></br>
+                                    George R.R.Martin</Card.Title>
+                                <Card.Text>
+                                    Action, RPG ,Romance
+                                </Card.Text>
+                                <Button >Read</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+
+                    <Col style={{ height: "500px" }} >
+                        <Card className="cards" style={{ width: '20rem' }}>
+                            <div style={{ height: '20rem', textAlign: 'center' }}>
+                                <Image src={Book10} style={{ objectFit: 'fill', border: "1px solid grey", borderBottom: "0px" }} alt="talkie" />
+                            </div>
+                            <Card.Body style={{ border: "1px solid grey" }} >
+                                <Card.Title>
+                                    Game Of Thrones
+                                    <br></br>
+                                    George R.R.Martin</Card.Title>
+                                <Card.Text>
+                                    Action, RPG ,Romance
+                                </Card.Text>
+                                <Button >Read</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+
+
+
+
+
+
+
+                </Row>
+
+
+            </Container>
     </div>
   );
 }

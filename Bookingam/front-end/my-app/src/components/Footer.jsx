@@ -6,12 +6,8 @@ function Footer() {
     <div className="footer" >
       <footer class="py-1 bg-dark fixed-bottom" >
         <div class="containerFooter">
-          <p class="m-0 text-right text-white">
-          <NavLink className="nav-link" to="/uploadBook">
-                  Upload PDF Book
-                </NavLink>
-                
-          
+          <p class="m-0 text-center text-white">
+          Bookingam
           </p>
         </div>
       </footer>

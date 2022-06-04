@@ -15,8 +15,6 @@ import {
   Horror,
   Fiction,
   UploadBook,
-  UploadImg,
-
   Login,
   Register
 } from "./pages/exporters/pageExporter";
@@ -64,7 +62,6 @@ function App() {
           <Route exact path="/horror" element={ <Horror /> } />
           <Route exact path="/myShelf" element={<AuthenticatedRoute><MyBookshelf /></AuthenticatedRoute>} />
           <Route exact path="/uploadBook" element={<AuthenticatedRoute><UploadBook /></AuthenticatedRoute>} />
-          <Route exact path="/uploadImg" element={<AuthenticatedRoute><UploadImg /></AuthenticatedRoute>} />
           <Route exact path="/login" element={<AlreayLogged><Login /></AlreayLogged>} />
           <Route exact path="/register" element={<AlreayLogged><Register /></AlreayLogged>} />
         </Routes>

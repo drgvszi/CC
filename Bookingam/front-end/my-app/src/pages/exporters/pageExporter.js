@@ -6,6 +6,6 @@ export { default as Fiction } from "../FictionGenre";
 export { default as Horror } from "../HorrorGenre";
 export { default as MyBookshelf } from "../MyBookshelf";
 export { default as UploadBook } from "../UploadBookForm";
-export { default as UploadImg } from "../UploadImageForm";
+
 export { default as Login } from "../Login";
 export { default as Register } from "../Register";
