@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Book10 } from "../exporters/imgExporter";
 import { Container, Row, Col, Card, Button, Image } from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
-import "../pagesCSS/list.css";
+import "../pagesCSS/page.css";
 
 function Romance() {
     return (
