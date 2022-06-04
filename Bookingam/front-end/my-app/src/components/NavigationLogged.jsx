@@ -17,20 +17,27 @@ const signout = async (e) => {
 }
 function NavigationLogged() {
   return (
+
     <div className="navigation">
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
+      <nav class="navbar navbar-expand navbar-dark ">
         <div className="container">
+
           <NavLink className="navbar-brand" to="/">
-            Bookingam
+            <div class="navtext">
+              Bookingam
+            </div>
             <span className="sr-only">(current)</span>
           </NavLink>
           <div class="navClass">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <NavLink className="nav-link" to="/uploadBook">
-                  UploadBook
+                  <div class="navtext">
+                    UploadBook
+                  </div>
                 </NavLink>
               </li>
+
               {/* <li className="nav-item">
                 <NavLink className="nav-link" to="/Account">
                   Account

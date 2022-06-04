@@ -1,2 +1,22 @@
+.navbar-dark {
+    background: rgb(29, 30, 31);
 
 
+}
+
+.navtext {
+    color: silver;
+}
+
+
+#signout {
+    background-color: rgb(29, 30, 31);
+    border: none;
+    color: silver;
+    margin-top: 1px;
+
+}
+
+#signout:hover {
+    background-color: black;
+}

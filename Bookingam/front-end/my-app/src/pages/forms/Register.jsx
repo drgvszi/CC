@@ -1,6 +1,6 @@
 import React from "react";
 // Import the functions you need from the SDKs you need
-import {getAuth, createUserWithEmailAndPassword} from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 const register = async (e) => {
   e.preventDefault();
@@ -14,7 +14,7 @@ const register = async (e) => {
     .catch((error) => {
       alert(error.code)
     });
-    
+
 }
 
 function Register() {
@@ -22,11 +22,11 @@ function Register() {
     <body>
       <div id="registerForm" class="center">
         <h1>Register Form</h1>
-          <form onSubmit={register}>
-              <input type="text" name = "email"/>
-              <input type="password" name = "pass"/>
-              <button id="register" class="btn btn-primary" type="submit">Register</button>
-          </form>
+        <form onSubmit={register}>
+          <input type="text" name="email" />
+          <input type="password" name="pass" />
+          <button id="register" class="btn btn-primary" type="submit">Register</button>
+        </form>
       </div>
     </body>
   );

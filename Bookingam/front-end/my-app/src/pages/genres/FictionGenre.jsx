@@ -1,18 +1,12 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Book10 } from "./exporters/imgExporter";
-import { Container, Row, Col, Card, Button, Image } from 'react-bootstrap'
+import { Book10 } from "../exporters/imgExporter";
+import { Container, Row, Col, Card, Button, Image } from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
-import "./pagesCSS/list.css"
-
-
-function Home() {
-
+import "../pagesCSS/list.css";
+function Fiction() {
     return (
-        <body>
-
-
-
+        <div className="Fiction">
 
             <div class="row">
                 <div class="column left">
@@ -172,9 +166,10 @@ function Home() {
                     </div>
                 </div>
             </div>
-
-        </body>
+        </div>
     );
 }
 
-export default Home;
+
+
+export default Fiction;

@@ -5,12 +5,13 @@ import "./componentsCSS/navigation.css";
 function Navigation() {
   return (
     <div className="navigation">
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
+      <nav className="navbar navbar-expand navbar-dark ">
         <div className="container">
-        <NavLink className="navbar-brand" to="/login">
-                  Bookingam
-                  <span className="sr-only">(current)</span>
-        </NavLink>
+
+          <NavLink className="navbar-brand" to="/login">
+            Bookingam
+            <span className="sr-only">(current)</span>
+          </NavLink>
           <div class="navClass">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">

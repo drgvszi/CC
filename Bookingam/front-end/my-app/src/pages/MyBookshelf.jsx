@@ -1,20 +1,20 @@
 import React from "react";
 import "./pagesCSS/card.css";
-import "./pagesCSS/home.css";
-import "./pagesCSS/toggleButton.css";
-import {Book1,Book2,Book13,Book4,Book5,Book3,Book6} from "./exporters/imgExporter";
+
+
+import { Book1, Book2, Book13, Book4, Book5, Book3, Book6 } from "./exporters/imgExporter";
 
 function MyBookshelf() {
-  return (
-    <div className="myBookshelf">
-      <div id="gallery"  >
+    return (
+        <div className="myBookshelf">
+            <div id="gallery"  >
 
-        <div class="row">
-        <div class="col-sm-2">
+                <div class="row">
+                    <div class="col-sm-2">
                         <div class="card">
                             <div class="card__side card__side--front">
                                 <div class="card__details">
-                                    
+
                                     <div class="card_details_img">
                                         <img src={Book1} alt="" />
                                     </div>
@@ -55,8 +55,8 @@ function MyBookshelf() {
                         </div>
                         <div class="card">
                             <div class="card__side card__side--front">
-                            <div class="card__details">
-                                    
+                                <div class="card__details">
+
                                     <div class="card_details_img">
                                         <img src={Book2} alt="" />
                                     </div>
@@ -67,7 +67,7 @@ function MyBookshelf() {
                                 <div class="card__cta">
                                     <div class="cardBack">
 
-                                    <div class="ro1BackCard">
+                                        <div class="ro1BackCard">
                                             <p>Name : Sin Eater</p>
                                         </div>
                                         <div class="ro2BackCard">
@@ -95,13 +95,13 @@ function MyBookshelf() {
                                 </div>
                             </div>
                         </div>
-                       
+
                     </div>
                     <div class="col-sm-2">
                         <div class="card">
                             <div class="card__side card__side--front">
-                            <div class="card__details">
-                                    
+                                <div class="card__details">
+
                                     <div class="card_details_img">
                                         <img src={Book3} alt="" />
                                     </div>
@@ -112,7 +112,7 @@ function MyBookshelf() {
                                 <div class="card__cta">
                                     <div class="cardBack">
 
-                                    <div class="ro1BackCard">
+                                        <div class="ro1BackCard">
                                             <p>Name : The Hollow Woods</p>
                                         </div>
                                         <div class="ro2BackCard">
@@ -142,8 +142,8 @@ function MyBookshelf() {
                         </div>
                         <div class="card">
                             <div class="card__side card__side--front">
-                            <div class="card__details">
-                                    
+                                <div class="card__details">
+
                                     <div class="card_details_img">
                                         <img src={Book4} alt="" />
                                     </div>
@@ -154,7 +154,7 @@ function MyBookshelf() {
                                 <div class="card__cta">
                                     <div class="cardBack">
 
-                                    <div class="ro1BackCard">
+                                        <div class="ro1BackCard">
                                             <p>Name : The Imperfection of Memory</p>
                                         </div>
                                         <div class="ro2BackCard">
@@ -186,8 +186,8 @@ function MyBookshelf() {
                     <div class="col-sm-2">
                         <div class="card">
                             <div class="card__side card__side--front">
-                            <div class="card__details">
-                                    
+                                <div class="card__details">
+
                                     <div class="card_details_img">
                                         <img src={Book5} alt="" />
                                     </div>
@@ -198,7 +198,7 @@ function MyBookshelf() {
                                 <div class="card__cta">
                                     <div class="cardBack">
 
-                                    <div class="ro1BackCard">
+                                        <div class="ro1BackCard">
                                             <p>Name : The Worst</p>
                                         </div>
                                         <div class="ro2BackCard">
@@ -228,8 +228,8 @@ function MyBookshelf() {
                         </div>
                         <div class="card">
                             <div class="card__side card__side--front">
-                            <div class="card__details">
-                                    
+                                <div class="card__details">
+
                                     <div class="card_details_img">
                                         <img src={Book6} alt="" />
                                     </div>
@@ -240,7 +240,7 @@ function MyBookshelf() {
                                 <div class="card__cta">
                                     <div class="cardBack">
 
-                                    <div class="ro1BackCard">
+                                        <div class="ro1BackCard">
                                             <p>Name : Lunar Storm</p>
                                         </div>
                                         <div class="ro2BackCard">
@@ -270,10 +270,10 @@ function MyBookshelf() {
                         </div>
                     </div>
                     <div class="col-sm-2">
-                    <div class="card">
+                        <div class="card">
                             <div class="card__side card__side--front">
-                            <div class="card__details">
-                                    
+                                <div class="card__details">
+
                                     <div class="card_details_img">
                                         <img src={Book13} alt="" />
                                     </div>
@@ -284,7 +284,7 @@ function MyBookshelf() {
                                 <div class="card__cta">
                                     <div class="cardBack">
 
-                                    <div class="ro1BackCard">
+                                        <div class="ro1BackCard">
                                             <p>Name :Harry Potter and the Deadly Hollows</p>
                                         </div>
                                         <div class="ro2BackCard">
@@ -313,10 +313,10 @@ function MyBookshelf() {
                             </div>
                         </div>
                     </div>
-                    </div>
-      </div>
-    </div>
-  );
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default MyBookshelf;
