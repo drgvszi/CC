@@ -15,6 +15,8 @@ const BookList = (props) => {
                             title ={book.volumeInfo.title}
                             author={book.volumeInfo.authors}
                             genre={book.volumeInfo.categories}
+                            buylink={book.saleInfo.buyLink}
+                            reviewlink={book.volumeInfo.reviewLink}
                             />
                             
                 })
