@@ -48,7 +48,7 @@ const BookList = (props) => {
                 genre={book.volumeInfo.categories}
                 handleAddToShelf={() => handleAddToShelf(book)}
                 buylink={book.saleInfo.buyLink}
-                reviewlink={book.volumeInfo.reviewLink}
+                reviewlink={book.volumeInfo.previewLink}
               />
             );
           })}

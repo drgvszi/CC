@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { getDatabase, ref, onValue, set, off } from "firebase/database";
 import { useAuthState } from "./creditentials/authContext";
-import ShelfBook from "./ShelfBook";
-
+import ShelfBook from "../components/bookGenerate/ShelfBook";
+import "./pagesCSS/page.css"
 const MyBookshelf = () => {
   const { user } = useAuthState();
   const [favoriteBooks, setFavoriteBooks] = useState(null);
@@ -43,17 +43,23 @@ const MyBookshelf = () => {
   if (!favoriteBooks) return <> </>;
 
   return (
-    <div className="myBookshelf">
-      <div id="gallery">
-        <div
-          style={{
+    <div class="row">
+    <div class="column left">
+    
+        
+    </div>
+    <div class="column right">
+        <div className="home">
+
+            
+        <div style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr 1fr",
             alignItems: "center",
             marginTop: "30px",
-          }}
-        >
-          {favoriteBooks.map((book, index) => {
+          }}>
+            
+           {favoriteBooks.map((book, index) => {
             return (
               <ShelfBook
                 key={index}
@@ -61,10 +67,15 @@ const MyBookshelf = () => {
                 handleRemoveBook={handleRemoveBook}
               />
             );
-          })}
-        </div>
-      </div>
-    </div>
+          }) }
+       
+
+                    
+
+
+</div>
+</div></div>
+</div>
   );
 };
 

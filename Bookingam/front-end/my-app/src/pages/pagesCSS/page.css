@@ -47,6 +47,7 @@ li a:hover {
 
 
 .left {
+  
   padding-top: 3%;
   width: 10%;
   background-color: rgb(29, 30, 31);
@@ -54,6 +55,7 @@ li a:hover {
 }
 
 .right {
+  padding-left: 4.5%;
   border-top:3px solid silver;
   border-left:3px solid silver;
   width: 90%;
@@ -73,3 +75,12 @@ li a:hover {
   min-height: 100vh;
 
 }
+
+a:link {
+  text-decoration: none;
+  color:silver;
+}
+
+a { color: inherit; } 
+
+a:hover{ color: white; } 

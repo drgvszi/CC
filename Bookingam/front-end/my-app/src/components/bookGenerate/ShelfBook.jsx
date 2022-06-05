@@ -16,6 +16,7 @@ const ShelfBook = ({ bookId, handleRemoveBook }) => {
             author: data.body.volumeInfo.authors,
             genre: data.body.volumeInfo.categories,
             thumbnail: data.body.volumeInfo.imageLinks.thumbnail,
+            reviewlink: data.body.volumeInfo.previewLink,
           };
 
           setBook(bookData);
@@ -26,7 +27,7 @@ const ShelfBook = ({ bookId, handleRemoveBook }) => {
   if (book === null) return <> </>;
 
   return (
-    <Col style={{ height: "600px" }}>
+    <Col style={{ height: "800px" }}>
       <Card className="cards" style={{ width: "20rem" }}>
         <div style={{ height: "20rem", textAlign: "center" }}>
           <Image
@@ -48,7 +49,7 @@ const ShelfBook = ({ bookId, handleRemoveBook }) => {
             <br></br>
             <br></br>
           </Card.Title>
-          <Card.Text style={{ height: "50px", paddingTop: "10px" }}>
+          <Card.Text style={{ height: "180px", paddingTop: "10px" }}>
             <br></br>
             {book.genre}
           </Card.Text>
@@ -56,12 +57,14 @@ const ShelfBook = ({ bookId, handleRemoveBook }) => {
           <div
             style={{ display: "flex", flexDirection: "row", columnGap: "20px" }}
           >
-            <Button
-              style={{ background: "black", boxShadow: "none", border: "0" }}
-            >
-              Read
-            </Button>
-            <Button onClick={() => handleRemoveBook(bookId)}>Remove</Button>
+            <Button onClick={() => window.open( book.reviewlink)}
+            
+            style={{color:"silver", background: "black", boxShadow: "none", border: "0"}}
+          >
+         Preview
+        
+          </Button>
+            <Button style={{color:"silver", background: "black", boxShadow: "none", border: "0" ,marginLeft:"20px" }} onClick={() => handleRemoveBook(bookId)}>Remove</Button>
           </div>
         </Card.Body>
       </Card>

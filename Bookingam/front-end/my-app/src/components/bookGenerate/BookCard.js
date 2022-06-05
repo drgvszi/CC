@@ -1,8 +1,12 @@
+
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Card, Button, Image } from "react-bootstrap";
 
+
 const BookCard = (props) => {
+ 
+
   return (
     <Col style={{ height: "600px" }}>
       <Card className="cards" style={{ width: "20rem" }}>
@@ -33,12 +37,18 @@ const BookCard = (props) => {
           <div
             style={{ display: "flex", flexDirection: "row", columnGap: "20px" }}
           >
-            <Button
-              style={{ background: "black", boxShadow: "none", border: "0" }}
+            <Button onClick={() => window.open( props.reviewlink)}
+            
+              style={{color:"silver", background: "black", boxShadow: "none", border: "0"}}
             >
-              Read
+           Preview
+          
             </Button>
-            <Button onClick={props.handleAddToShelf}>Adauga la favorite</Button>
+        
+            <Button    style={{ color:"silver",background: "black", boxShadow: "none", border: "0" ,marginLeft:"20px"
+            // ,position: "absolute",right: "0",marginRight:"20px"
+          }} 
+            onClick={props.handleAddToShelf}>Add to Shelf</Button>
           </div>
         </Card.Body>
       </Card>
