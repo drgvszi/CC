@@ -1,0 +1,36 @@
+
+
+.formSearch{
+   
+    padding-top: 5px;
+    display: flex;
+    padding-right: 25px;
+    justify-content: center;
+    
+
+
+}
+
+.inputSearch[type="text"],input:focus{
+    height: 30px;
+    width: 300px;
+    background-color: black;
+    border:1px solid white;
+    border-radius: 15%;
+    color: silver;
+
+ 
+ 
+}
+
+.buttonSearch{
+    height: 30px;
+    width: 80px;
+    background-color: black;
+    border:1px solid white;
+    border-radius: 20%;
+    color: silver;
+    text-align: center;
+
+    outline-color: red;
+}

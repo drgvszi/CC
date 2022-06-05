@@ -1,17 +1,40 @@
-import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Book10 } from "../exporters/imgExporter";
-import { Container, Row, Col, Card, Button, Image } from 'react-bootstrap';
+import React , { Component } from 'react';
+import SearchField from '../../components/SearchField';
+import request from 'superagent';
+import BookList from '../../components/bookGenerate/BookList';
 import { NavLink } from "react-router-dom";
-import "../pagesCSS/page.css";
-function Horror() {
+import "../pagesCSS/page.css"
+
+
+class Horror extends Component {
+constructor(props){
+    super(props);
+        this.state = {
+            books: [],
+            searchField: ''
+        }
+    
+}
+
+searchBook = (e) => {
+    e.preventDefault();
+    request 
+        .get("https://www.googleapis.com/books/v1/volumes")
+        .query({ q: this.state.searchField })
+        .then((data) => {
+            this.setState({ books: [...data.body.items]})
+        })
+}
+handleSearch = (e) => {
+     console.log()
+     this.setState({ searchField: e.target.value})
+}
+render() {
+
     return (
-        <div className="Horror">
-
-<div class="row">
+        <div class="row">
                 <div class="column left">
-
-                    <ul>
+                <ul>
                         <li class="line">
                             <NavLink to="/adventure">
                                 Adventure
@@ -38,135 +61,24 @@ function Horror() {
                             </NavLink>
                         </li>
                     </ul>
+                    
                 </div>
                 <div class="column right">
                     <div className="home">
 
-                        <Container className="px-4" style={{ paddingTop: "3%", paddingBottom: "3%" }}>
-                            <Row>
+                        
+                            
+                    <SearchField searchBook={this.searchBook} handleSearch={this.handleSearch} />
+                            <BookList books={this.state.books}/>
 
-                                <Col style={{ height: "500px" }} >
-                                    <Card className="cards" style={{ width: '20rem' }}>
-                                        <div style={{ height: '20rem', textAlign: 'center' }}>
-                                            <Image src={Book10} style={{ objectFit: 'fill', border: "1px solid grey", borderBottom: "0px" }} alt="talkie" />
-                                        </div>
-                                        <Card.Body style={{ border: "1px solid grey" }} >
-                                            <Card.Title>
-                                                Game Of Thrones
-                                                <br></br>
-                                                George R.R.Martin</Card.Title>
-                                            <Card.Text>
-                                                Action, RPG ,Romance
-                                            </Card.Text>
-                                            <Button style={{background:"black",boxShadow:"none",border:"0"}}>Read</Button>
-                                        </Card.Body>
-                                    </Card>
-                                </Col>
-
-                                <Col style={{ height: "500px" }} >
-                                    <Card className="cards" style={{ width: '20rem' }}>
-                                        <div style={{ height: '20rem', textAlign: 'center' }}>
-                                            <Image src={Book10} style={{ objectFit: 'fill', border: "1px solid grey", borderBottom: "0px" }} alt="talkie" />
-                                        </div>
-                                        <Card.Body style={{ border: "1px solid grey" }} >
-                                            <Card.Title>
-                                                Game Of Thrones
-                                                <br></br>
-                                                George R.R.Martin</Card.Title>
-                                            <Card.Text>
-                                                Action, RPG ,Romance
-                                            </Card.Text>
-                                            <Button style={{background:"black",boxShadow:"none",border:"0"}}>Read</Button>
-                                        </Card.Body>
-                                    </Card>
-                                </Col>
-
-                                <Col style={{ height: "500px" }} >
-                                    <Card className="cards" style={{ width: '20rem' }}>
-                                        <div style={{ height: '20rem', textAlign: 'center' }}>
-                                            <Image src={Book10} style={{ objectFit: 'fill', border: "1px solid grey", borderBottom: "0px" }} alt="talkie" />
-                                        </div>
-                                        <Card.Body style={{ border: "1px solid grey" }} >
-                                            <Card.Title>
-                                                Game Of Thrones
-                                                <br></br>
-                                                George R.R.Martin</Card.Title>
-                                            <Card.Text>
-                                                Action, RPG ,Romance
-                                            </Card.Text>
-                                            <Button style={{background:"black",boxShadow:"none",border:"0"}}>Read</Button>
-                                        </Card.Body>
-                                    </Card>
-                                </Col>
-
-                                <Col style={{ height: "500px" }} >
-                                    <Card className="cards" style={{ width: '20rem' }}>
-                                        <div style={{ height: '20rem', textAlign: 'center' }}>
-                                            <Image src={Book10} style={{ objectFit: 'fill', border: "1px solid grey", borderBottom: "0px" }} alt="talkie" />
-                                        </div>
-                                        <Card.Body style={{ border: "1px solid grey" }} >
-                                            <Card.Title>
-                                                Game Of Thrones
-                                                <br></br>
-                                                George R.R.Martin</Card.Title>
-                                            <Card.Text>
-                                                Action, RPG ,Romance
-                                            </Card.Text>
-                                            <Button style={{background:"black",boxShadow:"none",border:"0"}}>Read</Button>
-                                        </Card.Body>
-                                    </Card>
-                                </Col>
-
-                                <Col style={{ height: "500px" }} >
-                                    <Card className="cards" style={{ width: '20rem' }}>
-                                        <div style={{ height: '20rem', textAlign: 'center' }}>
-                                            <Image src={Book10} style={{ objectFit: 'fill', border: "1px solid grey", borderBottom: "0px" }} alt="talkie" />
-                                        </div>
-                                        <Card.Body style={{ border: "1px solid grey" }} >
-                                            <Card.Title>
-                                                Game Of Thrones
-                                                <br></br>
-                                                George R.R.Martin</Card.Title>
-                                            <Card.Text>
-                                                Action, RPG ,Romance
-                                            </Card.Text>
-                                            <Button style={{background:"black",boxShadow:"none",border:"0"}}>Read</Button>
-                                        </Card.Body>
-                                    </Card>
-                                </Col>
-
-                                <Col style={{ height: "500px" }} >
-                                    <Card className="cards" style={{ width: '20rem' }}>
-                                        <div style={{ height: '20rem', textAlign: 'center' }}>
-                                            <Image src={Book10} style={{ objectFit: 'fill', border: "1px solid grey", borderBottom: "0px" }} alt="talkie" />
-                                        </div>
-                                        <Card.Body style={{ border: "1px solid grey" }} >
-                                            <Card.Title>
-                                                Game Of Thrones
-                                                <br></br>
-                                                George R.R.Martin</Card.Title>
-                                            <Card.Text>
-                                                Action, RPG ,Romance
-                                            </Card.Text>
-                                            <Button style={{background:"black",boxShadow:"none",border:"0"}}>Read</Button>
-                                        </Card.Body>
-                                    </Card>
-                                </Col>
+                                
 
 
+</div>
+</div>
+</div>
 
-
-
-
-
-                            </Row>
-
-
-                        </Container>
-                    </div>
-                </div>
-            </div>
-        </div>
     );
+}
 }
 export default Horror;

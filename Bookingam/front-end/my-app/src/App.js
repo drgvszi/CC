@@ -15,13 +15,12 @@ import {
   Adventure,
   Horror,
   Fiction,
-  Books,
   UploadBook,
   Login,
   Register
 } from "./pages/exporters/pageExporter";
 
-import { AuthContextProvider, useAuthState } from './firebase'
+import { AuthContextProvider, useAuthState } from './creditentials/firebase'
 
 const Navbar = () => {
   const { isAuthenticated } = useAuthState()
@@ -60,7 +59,6 @@ function App() {
         <Navbar></Navbar>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/search" element={<Books />}/> 
           <Route exact path="/romance" element={<Romance />} />
           <Route exact path="/action" element={<Action />} />
           <Route exact path="/adventure" element={<Adventure />} />

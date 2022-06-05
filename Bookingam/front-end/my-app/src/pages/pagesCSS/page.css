@@ -10,6 +10,7 @@ body{
   resize: both;
   overflow: auto;
   background-color: silver;
+  
 }
 
 
@@ -67,4 +68,8 @@ li a:hover {
 
 .button{
   background-color: red;
+} 
+.row{
+  min-height: 100vh;
+
 }
