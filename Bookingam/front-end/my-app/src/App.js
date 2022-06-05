@@ -15,6 +15,7 @@ import {
   Adventure,
   Horror,
   Fiction,
+  Books,
   UploadBook,
   Login,
   Register
@@ -59,6 +60,7 @@ function App() {
         <Navbar></Navbar>
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/search" element={<Books />}/> 
           <Route exact path="/romance" element={<Romance />} />
           <Route exact path="/action" element={<Action />} />
           <Route exact path="/adventure" element={<Adventure />} />
