@@ -8,3 +8,4 @@ export { default as MyBookshelf } from "../MyBookshelf";
 export { default as UploadBook } from "../forms/UploadBookForm";
 export { default as Login } from "../forms/Login";
 export { default as Register } from "../forms/Register";
+export { default as Books } from "../Books";
