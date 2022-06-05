@@ -1,5 +1,5 @@
 import React from 'react';
-import "./pages/pagesCSS/card.css"
+
 
 const BookCard = (props) => {
     return(
