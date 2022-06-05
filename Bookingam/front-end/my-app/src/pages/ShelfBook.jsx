@@ -1,14 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Card, Button, Image } from "react-bootstrap";
+import request from "superagent";
 
-const BookCard = (props) => {
+const ShelfBook = ({ bookId, handleRemoveBook }) => {
+  const [book, setBook] = useState(null);
+
+  useEffect(() => {
+    if (book === null && bookId) {
+      request
+        .get(`https://www.googleapis.com/books/v1/volumes/${bookId}`)
+        .then((data) => {
+          const bookData = {
+            title: data.body.volumeInfo.title,
+            author: data.body.volumeInfo.authors,
+            genre: data.body.volumeInfo.categories,
+            thumbnail: data.body.volumeInfo.imageLinks.thumbnail,
+          };
+
+          setBook(bookData);
+        });
+    }
+  }, [bookId, book]);
+
+  if (book === null) return <> </>;
+
   return (
     <Col style={{ height: "600px" }}>
       <Card className="cards" style={{ width: "20rem" }}>
         <div style={{ height: "20rem", textAlign: "center" }}>
           <Image
-            src={props.image}
+            src={book.thumbnail}
             style={{
               objectFit: "fill",
               border: "1px solid grey",
@@ -19,17 +41,18 @@ const BookCard = (props) => {
         </div>
         <Card.Body style={{ border: "1px solid grey" }}>
           <Card.Title style={{ height: "100px" }}>
-            {props.title}
+            {book.title}
             <br></br>
             <br></br>
-            {props.author}
+            {book.author}
             <br></br>
             <br></br>
           </Card.Title>
           <Card.Text style={{ height: "50px", paddingTop: "10px" }}>
             <br></br>
-            {props.genre}
+            {book.genre}
           </Card.Text>
+
           <div
             style={{ display: "flex", flexDirection: "row", columnGap: "20px" }}
           >
@@ -38,7 +61,7 @@ const BookCard = (props) => {
             >
               Read
             </Button>
-            <Button onClick={props.handleAddToShelf}>Adauga la favorite</Button>
+            <Button onClick={() => handleRemoveBook(bookId)}>Remove</Button>
           </div>
         </Card.Body>
       </Card>
@@ -46,4 +69,4 @@ const BookCard = (props) => {
   );
 };
 
-export default BookCard;
+export default ShelfBook;

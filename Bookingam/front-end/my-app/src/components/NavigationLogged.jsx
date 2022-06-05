@@ -3,38 +3,34 @@ import { NavLink } from "react-router-dom";
 import "./componentsCSS/navigation.css";
 import { getAuth, signOut } from "firebase/auth";
 
-const signout = async (e) => {
-  e.preventDefault();
-  const auth = getAuth();
-  signOut(auth).then(() => {
-    window.location.replace("/login");
-  }).catch((error) => {
-    // An error happened.
-    alert(error.code)
-    alert(error.message)
-  });
+const NavigationLogged = () => {
+  const signout = async (e) => {
+    e.preventDefault();
+    const auth = getAuth();
+    signOut(auth)
+      .then(() => {
+        window.location.replace("/login");
+      })
+      .catch((error) => {
+        // An error happened.
+        alert(error.code);
+        alert(error.message);
+      });
+  };
 
-}
-function NavigationLogged() {
   return (
-
     <div className="navigation">
       <nav className="navbar navbar-expand navbar-dark ">
         <div className="container">
-
           <NavLink className="navbar-brand" to="/">
-            <div className="navtext">
-              Bookingam
-            </div>
+            <div className="navtext">Bookingam</div>
             <span className="sr-only">(current)</span>
           </NavLink>
           <div className="navClass">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <NavLink className="nav-link" to="/uploadBook">
-                  <div className="navtext">
-                    UploadBook
-                  </div>
+                  <div className="navtext">UploadBook</div>
                 </NavLink>
               </li>
 
@@ -43,14 +39,16 @@ function NavigationLogged() {
                   Account
                 </NavLink>
               </li> */}
-              {/* <li className="nav-item">
+              <li className="nav-item">
                 <NavLink className="nav-link" to="/myShelf">
                   My Shelf
                 </NavLink>
-              </li> */}
+              </li>
               <li className="nav-item">
                 <form onSubmit={signout}>
-                  <button id="signout" class="btn btn-primary" type="submit">Sign Out</button>
+                  <button id="signout" class="btn btn-primary" type="submit">
+                    Sign Out
+                  </button>
                 </form>
               </li>
             </ul>
@@ -59,6 +57,6 @@ function NavigationLogged() {
       </nav>
     </div>
   );
-}
+};
 
 export default NavigationLogged;

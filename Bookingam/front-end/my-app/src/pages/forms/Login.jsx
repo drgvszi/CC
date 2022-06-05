@@ -1,19 +1,21 @@
 import React from "react";
-// Import the functions you need from the SDKs you need
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import "../pagesCSS/login_register.css"
-const login = async (e) => {
-  e.preventDefault();
-  const email = e.target.email.value
-  const password = e.target.pass.value
-  const auth = getAuth();
-  signInWithEmailAndPassword(auth, email, password)
-    .catch((error) => {
-      alert(error.code)
-    });
 
-}
-function Login() {
+const Login = () => {
+
+  const login = async (e) => {
+    e.preventDefault();
+    const email = e.target.email.value
+    const password = e.target.pass.value
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, email, password)
+      .catch((error) => {
+        alert(error.code)
+      });
+  
+  }
+
   return (
     <body>
       <div className="form">
@@ -37,7 +39,6 @@ function Login() {
       </div>
     </body>
   );
-
 }
 
 export default Login;

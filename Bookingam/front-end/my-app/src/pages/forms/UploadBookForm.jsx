@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "../pagesCSS/form.css";
+import firebase from "../creditentials/initFB";
 
-function UploadBooks() {
+function UploadBookForm() {
+  const [title, setTitle] = useState("");
+
+  const handleOnChange = (e) => {
+    setTitle(e.target.value);
+  };
+  const createTodo = () => {
+    const todoRef = firebase.database().ref("Todo");
+    const todo = {
+      title,
+      complete: false,
+    };
+
+    todoRef.push(todo);
+  };
   return (
-
-    <form>
-      <div className="form-group">
-        <label for="exampleFormControlFile1">Upload Pdf</label>
-        <input type="file" class="form-control-file" id="exampleFormControlFile1"></input>
-      </div>
-    </form>
+    <div className="form-group">
+      <input type="text" onChange={handleOnChange} value={title}></input>
+      <button onClick={createTodo}>Upload </button>
+    </div>
   );
 }
 
-export default UploadBooks;
+export default UploadBookForm;
