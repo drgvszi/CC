@@ -22,13 +22,41 @@ searchBook = (e) => {
         .get("https://www.googleapis.com/books/v1/volumes")
         .query({ q: this.state.searchField })
         .then((data) => {
-            this.setState({ books: [...data.body.items]})
+            const cleanData = this.cleanData(data)
+            this.setState({ books: cleanData })
         })
 }
+
+
 handleSearch = (e) => {
      console.log()
      this.setState({ searchField: e.target.value})
 }
+handleSort = (e) => {
+    console.log(e.target.value)
+    this.setState({ sort: e.target.value})
+}
+
+cleanData = (data) => {
+    const cleanedData = data.body.items.map((book) => {
+        if(book.volumeInfo.hasOwnProperty('imageLinks') === false){
+            book.volumeInfo['imageLinks'] = {thumbnail : "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"};
+        }
+        
+        else if(book.saleInfo.hasOwnProperty('buyLink') === false){
+            book.volumeInfo['buyLink'] = 'Not Available';
+        }
+
+        else if(book.volumeInfo.hasOwnProperty('previewLink') === false){
+            book.volumeInfo['previewLink'] = 'Not Available';
+        }
+
+        return book;
+    })
+
+    return cleanedData
+}
+
 render() {
 
     return (
@@ -68,7 +96,7 @@ render() {
 
                         
                             
-                    <SearchField searchBook={this.searchBook} handleSearch={this.handleSearch} />
+                    <SearchField searchBook={this.searchBook} handleSearch={this.handleSearch} handleSort={this.handleSort}/>
                             <BookList books={this.state.books}/>
 
                                 
