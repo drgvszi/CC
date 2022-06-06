@@ -3,21 +3,20 @@ import React from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import "../pagesCSS/login_register.css";
 
-const register = async (e) => {
-  e.preventDefault();
-  const email = e.target.email.value;
-  const password = e.target.pass.value;
-  const auth = getAuth();
-  createUserWithEmailAndPassword(auth, email, password)
-    .then(() => {
-      alert("welcome");
-    })
-    .catch((error) => {
-      alert(error.code);
-    });
-};
-
-function Register() {
+const Register = () => {
+  const register = async (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.pass.value;
+    const auth = getAuth();
+    createUserWithEmailAndPassword(auth, email, password)
+      .then(() => {
+        alert("welcome");
+      })
+      .catch((error) => {
+        alert(error.code);
+      });
+  };
   return (
     <div className="form">
       <div id="registerForm" class="center">
@@ -40,6 +39,6 @@ function Register() {
       </div>
     </div>
   );
-}
+};
 
 export default Register;

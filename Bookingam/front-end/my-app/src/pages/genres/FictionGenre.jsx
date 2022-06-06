@@ -41,7 +41,7 @@ const Fiction = () => {
       .then((data) => setFictionBooks(data.body));
   }, []);
 
-  if (fictionBooks.length === 0) return <p>Nu exista carti </p>;
+  if (fictionBooks.length === 0) return <></>;
 
   return (
     <div class="row">

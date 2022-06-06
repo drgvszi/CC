@@ -41,7 +41,7 @@ const Adventure = () => {
       .then((data) => setAdventureBooks(data.body));
   }, []);
 
-  if (adventureBooks.length === 0) return <p> Nu exista carti </p>;
+  if (adventureBooks.length === 0) return <></>;
 
   return (
     <div class="row">

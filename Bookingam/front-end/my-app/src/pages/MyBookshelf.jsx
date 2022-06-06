@@ -40,8 +40,7 @@ const MyBookshelf = () => {
     });
   };
 
-  if (!favoriteBooks) return <p> Nu exista carti favorite </p>;
-
+  if (!favoriteBooks) return <></>;
   return (
     <div class="row">
       <div class="column left"></div>

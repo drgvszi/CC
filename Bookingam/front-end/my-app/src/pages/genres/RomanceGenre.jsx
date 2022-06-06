@@ -41,7 +41,7 @@ const Romance = () => {
       .then((data) => setRomanceBooks(data.body));
   }, []);
 
-  if (romanceBooks.length === 0) return <p> Nu exista carti </p>;
+  if (romanceBooks.length === 0) return <> </>;
 
   return (
     <div class="row">

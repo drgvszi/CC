@@ -41,7 +41,7 @@ const Horror = () => {
       .then((data) => setHorrorBooks(data.body));
   }, []);
 
-  if (horrorBooks.length === 0) return <p> Nu exista carti </p>;
+  if (horrorBooks.length === 0) return <> </>;
 
   return (
     <div class="row">
