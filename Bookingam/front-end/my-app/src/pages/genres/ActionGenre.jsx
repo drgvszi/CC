@@ -41,7 +41,7 @@ const Action = () => {
       .then((data) => setActionBooks(data.body));
   }, []);
 
-  if (actionBooks.length === 0) return <p> Nu exista carti</p>;
+  if (actionBooks.length === 0) return <></>;
 
   return (
     <div class="row">

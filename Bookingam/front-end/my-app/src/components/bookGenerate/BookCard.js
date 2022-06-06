@@ -14,7 +14,11 @@ const BookCard = (props) => {
               border: "1px solid grey",
               borderBottom: "0px",
             }}
-            alt="talkie"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src =
+                "https://propertywiselaunceston.com.au/wp-content/themes/property-wise/images/no-image.png";
+            }}
           />
         </div>
         <Card.Body style={{ border: "1px solid grey" }}>
