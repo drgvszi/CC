@@ -41,7 +41,7 @@ const NavigationLogged = () => {
               </li> */}
               <li className="nav-item">
                 <NavLink className="nav-link" to="/myShelf">
-                  My Shelf
+                <div className="navtext">My Shelf</div>
                 </NavLink>
               </li>
               <li className="nav-item">
