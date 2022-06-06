@@ -39,6 +39,10 @@ function UploadBookForm() {
           <label>URL </label>
             <input id="formID" type="url" name="url" placeholder="URL" />
           </div>
+          <div className="input-container">
+          <label>Image URL </label>
+            <input id="formID" type="url" name="imgUrl" placeholder="Image URL" />
+          </div>
           <div className="button-container">
             <button id="upload" class="btn btn-primary" type="submit">Upload</button>
           </div>

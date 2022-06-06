@@ -12,6 +12,7 @@
 
 input[type="text"],
 input[type="password"] {
+  width: 99%;
   height: 25px;
   margin-bottom: 10px;
 
@@ -100,7 +101,7 @@ h1 {
 }
 
 #uploadForm {
-  height: 550px;
+  height: 110fr;
   width: 350px;
   background-color: black;
   margin-bottom: 100px;
@@ -111,6 +112,7 @@ h1 {
   color: black;
   outline: 0;
   border:none;
+  margin-bottom: 10px;
 
 }
 
