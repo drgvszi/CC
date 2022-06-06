@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
+  
   height: 100vh;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   background-color: silver;
@@ -21,7 +21,21 @@ input[type="text"],
 input[type="password"],
 textarea {
   background-color: white;
+  color:black
 }
+
+#formID[type="text"],#formID[type="url"]{
+width: 99%;
+height: 25px;
+margin-bottom: 10px;
+}
+
+#formID[type="text"],#formID[type="url"],
+textarea {
+  background-color: white;
+  color:black
+}
+
 
 h1 {
   color: silver;
@@ -66,6 +80,8 @@ h1 {
 #register {
   background-color: silver;
   color: black;
+  outline: 0;
+  border:none;
 }
 
 
@@ -79,4 +95,22 @@ h1 {
 #login {
   background-color: silver;
   color: black;
+  outline: 0;
+  border:none;
 }
+
+#uploadForm {
+  height: 550px;
+  width: 350px;
+  background-color: black;
+  margin-bottom: 100px;
+}
+
+#upload {
+  background-color: silver;
+  color: black;
+  outline: 0;
+  border:none;
+
+}
+
