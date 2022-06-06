@@ -1,5 +1,6 @@
 import React from "react";
 
+import firebaseApp from "./pages/creditentials/initFB";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Navigation, NavigationLogged, Footer } from "./components/exporter";
 import {
@@ -12,6 +13,7 @@ import {
   Fiction,
   UploadBook,
   Login,
+  MyBooks,
   Register,
 } from "./pages/exporters/pageExporter";
 
@@ -62,6 +64,15 @@ function App() {
             element={
               <AuthenticatedRoute>
                 <MyBookshelf />
+              </AuthenticatedRoute>
+            }
+          />
+          <Route
+            exact
+            path="/myBooks"
+            element={
+              <AuthenticatedRoute>
+                <MyBooks />
               </AuthenticatedRoute>
             }
           />

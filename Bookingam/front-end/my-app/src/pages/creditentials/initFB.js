@@ -8,7 +8,7 @@ import {
 const config = {
   apiKey: "AIzaSyDIEFlPECMWoFjYcxgRg7Rf1DBhXdjTruQ",
   authDomain: "cc-uaic-350913.firebaseapp.com",
-  databaseURL: "https://cc-uaic-350913.europe-west1.firebasedatabase.app/",
+  databaseURL: "https://cc-uaic-350913-b9a9c.firebaseio.com/",
   projectId: "cc-uaic-350913",
   storageBucket: "cc-uaic-350913.appspot.com",
   messagingSenderId: "481327442034",

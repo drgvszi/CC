@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getDatabase, ref, onValue, set, off } from "firebase/database";
 import { useAuthState } from "./creditentials/authContext";
 import ShelfBook from "../components/bookGenerate/ShelfBook";
-import "./pagesCSS/page.css"
+import "./pagesCSS/page.css";
 const MyBookshelf = () => {
   const { user } = useAuthState();
   const [favoriteBooks, setFavoriteBooks] = useState(null);
@@ -40,42 +40,34 @@ const MyBookshelf = () => {
     });
   };
 
-  if (!favoriteBooks) return <> </>;
+  if (!favoriteBooks) return <p> Nu exista carti favorite </p>;
 
   return (
     <div class="row">
-    <div class="column left">
-    
-        
-    </div>
-    <div class="column right">
+      <div class="column left"></div>
+      <div class="column right">
         <div className="home">
-
-            
-        <div style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
-            alignItems: "center",
-            marginTop: "30px",
-          }}>
-            
-           {favoriteBooks.map((book, index) => {
-            return (
-              <ShelfBook
-                key={index}
-                bookId={book}
-                handleRemoveBook={handleRemoveBook}
-              />
-            );
-          }) }
-       
-
-                    
-
-
-</div>
-</div></div>
-</div>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              alignItems: "center",
+              marginTop: "30px",
+            }}
+          >
+            {favoriteBooks.map((book, index) => {
+              return (
+                <ShelfBook
+                  key={index}
+                  bookId={book}
+                  handleRemoveBook={handleRemoveBook}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

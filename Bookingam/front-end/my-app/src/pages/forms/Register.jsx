@@ -19,28 +19,26 @@ const register = async (e) => {
 
 function Register() {
   return (
-    <body>
-      <div className="form">
-        <div id="registerForm" class="center">
-          <h1>Register</h1>
-          <form onSubmit={register}>
-            <div className="input-container">
-              <label>Email </label>
-              <input type="text" name="email" placeholder="Email" />
-            </div>
-            <div className="input-container">
-              <label>Password </label>
-              <input type="password" name="pass" placeholder="Password" />
-            </div>
-            <div className="button-container">
-              <button id="register" class="btn btn-primary" type="submit">
-                Register
-              </button>
-            </div>
-          </form>
-        </div>
+    <div className="form">
+      <div id="registerForm" class="center">
+        <h1>Register</h1>
+        <form onSubmit={register}>
+          <div className="input-container">
+            <label>Email </label>
+            <input type="text" name="email" placeholder="Email" />
+          </div>
+          <div className="input-container">
+            <label>Password </label>
+            <input type="password" name="pass" placeholder="Password" />
+          </div>
+          <div className="button-container">
+            <button id="register" class="btn btn-primary" type="submit">
+              Register
+            </button>
+          </div>
+        </form>
       </div>
-    </body>
+    </div>
   );
 }
 
