@@ -7,7 +7,7 @@ module.exports = async function (context, req) {
         url: '/translate',
         method: 'post',
         headers: {
-            'Ocp-Apim-Subscription-Key': "8743dcb775ec42138f5a86cb9d72806b",
+            'Ocp-Apim-Subscription-Key': "",
             'Ocp-Apim-Subscription-Region': "northeurope",
             'Content-type': 'application/json',
             'X-ClientTraceId': uuidv4().toString()
